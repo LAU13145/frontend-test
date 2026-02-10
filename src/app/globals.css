@@ -1,0 +1,76 @@
+@import "tailwindcss";
+@plugin "./hero.ts";
+@source "../../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}";
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme {
+  --color-colorColmena: #0097ae;
+  --color-colmena2: #f9b036;
+  --color-colmena3: #fec82f;
+
+  --color-green-400: #e6f3f5;
+  --color-green-300: #d9ecef;
+  --color-green-200: #b0d8de;
+  --color-green-100: #008296;
+  --color-green0: #007587;
+  --color-green100: #006878;
+  --color-green200: #006271;
+  --color-green300: #004e5a;
+  --color-green400: #003a44;
+  --color-green500: #002e35;
+
+  --color-greyscale-500: #f9fafb;
+  --color-greyscale-400: #f0f1f2;
+  --color-greyscale-300: #e9eaec;
+  --color-greyscale-200: #d1d3d8;
+  --color-greyscale-100: #6b7280;
+  --color-greyscale0: #606773;
+  --color-greyscale100: #565b66;
+  --color-greyscale200: #505660;
+  --color-greyscale300: #40444d;
+  --color-greyscale400: #30333a;
+  --color-greyscale500: #25282d;
+
+  --color-success0: #386e37;
+  --color-success100: #468a44;
+  --color-success200: #4a9349;
+  --color-success300: #54a652;
+  --color-success400: #5db85b;
+  --color-success-100: #2a5329;
+  --color-success-200: #214020;
+  --color-success-300: #eff8ef;
+  --color-success-400: #e7f4e6;
+  --color-success-500: #cde9cc;
+
+  --color-error0: #a01817;
+  --color-error100: #961716;
+  --color-error200: #781211;
+  --color-error300: #5a0d0d;
+  --color-error400: #460b0a;
+  --color-error-100: #b41b1a;
+  --color-error-200: #c81e1d;
+  --color-error-300: #eeb9b9;
+  --color-error-400: #f7dddd;
+  --color-error-500: #fef1f1;
+
+  --color-yellow-500: #fef7eb;
+  --color-yellow-400: #fde7c1;
+  --color-yellow-300: #fcdba3;
+  --color-yellow-200: #fbca78;
+  --color-yellow-100: #fac05e;
+  --color-yellow0: #f9b036;
+  --color-yellow100: #e3a031;
+  --color-yellow200: #b17d26;
+  --color-yellow300: #89611e;
+  --color-yellow400: #694a17;
+}
+
+body {
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}

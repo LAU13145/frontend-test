@@ -15,7 +15,7 @@ export const SimulatorForm = () => {
         regex={/.*/}
         size={"sm"}
         type={"number"}
-        value={initialAmount.toString()}
+        value={initialAmount}
       />
     </section>
   );

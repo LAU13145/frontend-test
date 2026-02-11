@@ -78,7 +78,6 @@ export const InputComponent = ({
 }: InputComponentProps) => {
   const [touched, setTouched] = useState<boolean>(false);
 
-  // Validate errors states
   const isRegexInvalid = regex && value ? !regex.test(value) : false;
   const isRequiredInvalid = isRequired && touched && value.trim() === "";
   const isMaxLengthInvalid =
@@ -98,7 +97,6 @@ export const InputComponent = ({
     return undefined;
   })();
 
-  // Define class names based on state
   const classNames = {
     base: "",
     label: `after:ms-0! after:content-[''] font-bold text-sm after:text-transparent ${hasError ? "!text-error-200" : isDisabled ? "!text-greyscale-100" : isSuccess ? "!text-success400" : "!text-greyscale300"}`,
@@ -131,7 +129,6 @@ export const InputComponent = ({
     errorMessage: `!text-error-200 text-sm mt-1`,
   };
 
-  // Define clear icon based on state
   const clearIconColor = hasError
     ? "!text-error-200"
     : isSuccess
@@ -140,12 +137,10 @@ export const InputComponent = ({
 
   const clearIcon = <XMarkIcon className={`h-4 w-4 ${clearIconColor}`} />;
 
-  // Normalize value by removing extra spaces
   const normalizeValue = (value: string) => {
     return value.replace(/\s+/g, " ").replace(/^\s/, "");
   };
 
-  // blur and change handlers
   const handleValueChange = (rawValue: string) => {
     const normalizedValue = normalizeValue(rawValue);
     onValueChange(normalizedValue);

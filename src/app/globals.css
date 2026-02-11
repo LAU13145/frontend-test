@@ -9,9 +9,9 @@
 }
 
 @theme {
-  --color-colorColmena: #0097ae;
-  --color-colmena2: #f9b036;
-  --color-colmena3: #fec82f;
+  --color-primaryColor: #0097ae;
+  --color-secondaryColor: #f9b036;
+  --color-tertiaryColor: #fec82f;
 
   --color-green-400: #e6f3f5;
   --color-green-300: #d9ecef;

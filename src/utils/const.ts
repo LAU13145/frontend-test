@@ -1,0 +1,168 @@
+import {
+  imgBusiness,
+  imgFinanceFive,
+  imgFinanceFour,
+  imgFinanceOne,
+  imgFinanceThree,
+  imgFinanceTwo,
+} from "../assets";
+import { ProductsList } from "./types";
+
+export const productsList: ProductsList = {
+  savings_accounts: [
+    {
+      id: 1,
+      name: "Cuenta de Ahorro Básica",
+      type: "tradicional",
+      img: imgFinanceOne,
+      interest_rate: 1.5,
+      currency: "COP",
+      minimum_opening_amount: 50000,
+      minimum_maintenance_amount: 0,
+      benefits: [
+        "Sin cuota de manejo",
+        "Retiros ilimitados",
+        "Tarjeta débito gratis",
+      ],
+      requirements: ["Cédula de ciudadanía", "Mayor de 18 años"],
+      fees: {
+        monthly_maintenance: 0,
+        own_atm_withdrawal: 0,
+        other_atm_withdrawal: 3500,
+      },
+    },
+    {
+      id: 2,
+      name: "Cuenta de Ahorro Premium",
+      type: "premium",
+      img: imgBusiness,
+      interest_rate: 3.2,
+      currency: "COP",
+      minimum_opening_amount: 5000000,
+      minimum_maintenance_amount: 3000000,
+      benefits: [
+        "Tasa de interés preferencial",
+        "Asesor financiero personal",
+        "Seguro incluido",
+        "Retiros gratis en cualquier cajero",
+      ],
+      requirements: [
+        "Cédula de ciudadanía",
+        "Mayor de 18 años",
+        "Ingreso mensual mínimo de $3,000,000",
+      ],
+      fees: {
+        monthly_maintenance: 15000,
+        own_atm_withdrawal: 0,
+        other_atm_withdrawal: 0,
+      },
+    },
+    {
+      id: 3,
+      name: "Cuenta Ahorro Programado",
+      type: "programado",
+      img: imgFinanceTwo,
+      interest_rate: 4.5,
+      currency: "COP",
+      minimum_opening_amount: 100000,
+      minimum_maintenance_amount: 100000,
+      term_months: 12,
+      benefits: [
+        "Mayor rentabilidad",
+        "Ahorro mensual automático",
+        "Meta de ahorro definida",
+      ],
+      requirements: [
+        "Cédula de ciudadanía",
+        "Mayor de 18 años",
+        "Compromiso de ahorro mensual",
+      ],
+      fees: {
+        monthly_maintenance: 0,
+        early_withdrawal: 50000,
+      },
+    },
+    {
+      id: 4,
+      name: "Cuenta de Ahorro Infantil",
+      type: "infantil",
+      img: imgFinanceThree,
+      interest_rate: 2.0,
+      currency: "COP",
+      minimum_opening_amount: 20000,
+      minimum_maintenance_amount: 0,
+      max_age: 17,
+      benefits: [
+        "Sin cuota de manejo",
+        "Educación financiera gratis",
+        "Tarjeta con control parental",
+      ],
+      requirements: [
+        "Registro civil o cédula de ciudadanía",
+        "Menor de 18 años",
+        "Padre, madre o tutor legal",
+      ],
+      fees: {
+        monthly_maintenance: 0,
+        own_atm_withdrawal: 0,
+        other_atm_withdrawal: 0,
+      },
+    },
+    {
+      id: 5,
+      name: "Cuenta de Ahorro Digital",
+      type: "digital",
+      img: imgFinanceFour,
+      interest_rate: 2.8,
+      currency: "COP",
+      minimum_opening_amount: 0,
+      minimum_maintenance_amount: 0,
+      benefits: [
+        "Apertura 100% digital",
+        "Sin papeleos",
+        "App móvil intuitiva",
+        "Notificaciones en tiempo real",
+      ],
+      requirements: [
+        "Cédula de ciudadanía",
+        "Mayor de 18 años",
+        "Teléfono inteligente",
+      ],
+      fees: {
+        monthly_maintenance: 0,
+        own_atm_withdrawal: 0,
+        other_atm_withdrawal: 2000,
+      },
+    },
+    {
+      id: 6,
+      name: "Cuenta de Ahorro en Dólares",
+      type: "moneda_extranjera",
+      img: imgFinanceFive,
+      interest_rate: 0.5,
+      currency: "USD",
+      minimum_opening_amount: 100,
+      minimum_maintenance_amount: 50,
+      benefits: [
+        "Cobertura cambiaria",
+        "Transferencias internacionales",
+        "Ideal para viajeros frecuentes",
+      ],
+      requirements: [
+        "Cédula de ciudadanía",
+        "Mayor de 18 años",
+        "Declaración de origen de fondos",
+      ],
+      fees: {
+        monthly_maintenance: 5,
+        international_transfer: 25,
+      },
+    },
+  ],
+
+  metadata: {
+    last_updated: "2025-02-10",
+    total_products: 6,
+    available_currencies: ["COP", "USD"],
+  },
+};

@@ -105,13 +105,13 @@ export const InputComponent = ({
       `border
         ${sizeStyles[size]}
         backdrop-white
-        hover:!border-[#B2C7D9]
+        hover:!border-blue-200
         data-[hover=true]:!bg-white
         focus-within:ring-0 focus-within:ring-transparent
         group-data-[focus-visible=true]:!bg-white
         group-data-[focus=true]:!bg-white
         ${hasError ? "!bg-error-500 !border-error-200" : isSuccess ? "!bg-success-300 !border-success400" : "!bg-white !border-greyscale-300"}
-        ${hasError ? "group-data-[focus=true]:!border-error-200 group-data-[focus-visible=true]:!border-error-200" : isSuccess ? "group-data-[focus=true]:!border-success-400 group-data-[focus-visible=true]:!border-success-400" : "group-data-[focus=true]:!border-colorColmena group-data-[focus-visible=true]:!border-colorColmena"}
+        ${hasError ? "group-data-[focus=true]:!border-error-200 group-data-[focus-visible=true]:!border-error-200" : isSuccess ? "group-data-[focus=true]:!border-success-400 group-data-[focus-visible=true]:!border-success-400" : "group-data-[focus=true]:!border-blue-400 group-data-[focus-visible=true]:!border-blue-400"}
         cursor-text!
         `,
     ],

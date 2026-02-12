@@ -166,3 +166,16 @@ export const productsList: ProductsList = {
     available_currencies: ["COP", "USD"],
   },
 };
+
+export const formatCOP = (value: string) => {
+  if (!value) return "";
+
+  return new Intl.NumberFormat("es-CO", {
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0,
+  }).format(Number(value));
+};
+
+export const cleanNumber = (value: string) => {
+  return value.replace(/\D/g, "");
+};

@@ -2,7 +2,11 @@
 
 import { useState, useMemo } from "react";
 import { InputComponent } from "../atoms";
-import { cleanNumber, formatCOP } from "@/src/utils";
+import { amountRegex, cleanNumber, formatCOP, monthsRegex } from "@/src/utils";
+import {
+  CalendarDaysIcon,
+  CurrencyDollarIcon,
+} from "@heroicons/react/24/solid";
 
 export const SimulatorForm = () => {
   const [initialAmount, setInitialAmount] = useState("");
@@ -36,8 +40,9 @@ export const SimulatorForm = () => {
 
   return (
     <section className="mt-8 space-y-6">
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
         <InputComponent
+          endContent={<CurrencyDollarIcon className="h-6 w-6 text-gray-400" />}
           errorMessageRegex={"Monto inválido"}
           errorMessageMaxLength={"Superaste el límite de caracteres"}
           errorMessageRequired={"Este campo es obligatorio"}
@@ -46,7 +51,7 @@ export const SimulatorForm = () => {
           minLength={4}
           maxLength={15}
           placeholder={"Ingresa el monto inicial"}
-          regex={/^(?=.{4,15}$)\d{1,3}(\.\d{3})*$/}
+          regex={amountRegex}
           type={"text"}
           value={formatCOP(initialAmount)}
           startContent={initialAmount !== "" && <span>$</span>}
@@ -58,6 +63,7 @@ export const SimulatorForm = () => {
         />
 
         <InputComponent
+          endContent={<CurrencyDollarIcon className="h-6 w-6 text-gray-400" />}
           errorMessageRegex={"Monto inválido"}
           errorMessageMaxLength={"Superaste el límite de caracteres"}
           errorMessageRequired={"Este campo es obligatorio"}
@@ -66,7 +72,7 @@ export const SimulatorForm = () => {
           minLength={4}
           maxLength={15}
           placeholder={"Ingresa el aporte mensual"}
-          regex={/^(?=.{4,15}$)\d{1,3}(\.\d{3})*$/}
+          regex={amountRegex}
           type={"text"}
           value={formatCOP(monthlyContribution)}
           startContent={monthlyContribution !== "" && <span>$</span>}
@@ -76,23 +82,24 @@ export const SimulatorForm = () => {
           }}
           size="sm"
         />
-
-        <InputComponent
-          errorMessageRegex={"Mes inválido"}
-          errorMessageMaxLength={"Superaste el límite de caracteres"}
-          errorMessageRequired={"Este campo es obligatorio"}
-          label={"Meses"}
-          labelPlacement={"outside"}
-          minLength={1}
-          maxLength={2}
-          placeholder={"Ingresa los meses"}
-          regex={/^(?:[1-9]|1[0-2])$/}
-          onValueChange={(value) => setMonths(value)}
-          type={"text"}
-          value={months}
-          size={"sm"}
-        />
       </div>
+
+      <InputComponent
+        endContent={<CalendarDaysIcon className="h-6 w-6 text-gray-400" />}
+        errorMessageRegex={"Mes inválido"}
+        errorMessageMaxLength={"Superaste el límite de caracteres"}
+        errorMessageRequired={"Este campo es obligatorio"}
+        label={"Meses"}
+        labelPlacement={"outside"}
+        minLength={1}
+        maxLength={2}
+        placeholder={"Ingresa los meses"}
+        regex={monthsRegex}
+        onValueChange={(value) => setMonths(value)}
+        type={"text"}
+        value={months}
+        size={"sm"}
+      />
 
       <div className="rounded-lg bg-gray-100 p-4 text-center">
         <p className="text-sm text-gray-600">Valor futuro estimado</p>

@@ -24,7 +24,9 @@ export default function SimulatorPage() {
         proyectado
       </p>
 
-      <SimulatorForm />
+      <div className="mt-10 rounded-2xl bg-white p-6 shadow-xl md:p-10">
+        <SimulatorForm />
+      </div>
     </section>
   );
 }

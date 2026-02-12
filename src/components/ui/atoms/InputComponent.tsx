@@ -126,7 +126,7 @@ export const InputComponent = ({
     clearButton: `!text-greyscale300`,
     helperWrapper: "",
     description: `text-sm mt-1 ${isDisabled ? "!text-greyscale-200" : isSuccess ? "!text-success400" : "!text-greyscale-100"}`,
-    errorMessage: `!text-error-200 text-sm mt-1`,
+    errorMessage: `!text-error-200 text-sm mt-1 text-left!`,
   };
 
   const clearIconColor = hasError

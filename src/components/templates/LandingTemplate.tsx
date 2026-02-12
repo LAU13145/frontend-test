@@ -9,7 +9,7 @@ export const LandingTemplate = () => {
   const router = useRouter();
 
   return (
-    <main className="flex min-h-screen flex-col bg-gradient-to-br from-slate-50 to-slate-100">
+    <main className="flex min-h-screen flex-col">
       <header className="flex items-center justify-between px-8 py-6">
         <h1 className="text-xl font-bold text-blue-900">FinanzaPro</h1>
       </header>

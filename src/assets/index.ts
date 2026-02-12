@@ -6,6 +6,7 @@ import imgFinanceThree from "./finance-3.jpg";
 import imgFinanceFour from "./finance-4.webp";
 import imgFinanceFive from "./finance-5.jpg";
 import imgFinanceSix from "./finance-6.jpg";
+import imgFinanceSeven from "./finance-7.webp";
 
 export {
   imgAgent,
@@ -16,4 +17,5 @@ export {
   imgFinanceFour,
   imgFinanceFive,
   imgFinanceSix,
+  imgFinanceSeven,
 };
